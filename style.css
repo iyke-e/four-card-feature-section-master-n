@@ -1,0 +1,156 @@
+*,
+ ::after,
+ ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* ### Neutral  */
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.light-header {
+    font-weight: 400;
+}
+
+p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+main {
+    padding-bottom: 2em;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-block: 2rem;
+}
+
+.box {
+    width: min(85vw, 30rem);
+    height: 20rem;
+    position: relative;
+    margin-top: 30px;
+    margin-inline: 15px;
+    border-radius: 5px;
+    box-shadow: 0 5px 17px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    transition: 200ms ease-in-out;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+.yellow::before {
+    content: '';
+    position: absolute;
+    background-color: var(--Orange);
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.red::before {
+    content: '';
+    position: absolute;
+    background-color: var(--Red);
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.cyan::before {
+    content: '';
+    position: absolute;
+    background-color: var(--Cyan);
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.blue::before {
+    content: '';
+    position: absolute;
+    background-color: var(--Blue);
+    display: inline-block;
+    height: 4px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.img {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+img {
+    width: 5em;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    br {
+        display: none;
+    }
+    header {
+        padding-inline: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-block: 2rem;
+    }
+}
